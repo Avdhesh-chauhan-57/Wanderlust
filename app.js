@@ -102,6 +102,10 @@ app.use("/",userrouter);
 app.use("/", pagesRoutes);
 
 
+// 👇 ADD THIS EXACTLY HERE
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 
 
