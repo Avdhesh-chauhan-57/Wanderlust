@@ -1,4 +1,4 @@
-
+<!-- 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"><i class="fa-brands fa-airbnb"></i></a>
@@ -11,9 +11,9 @@
       <div class="navbar-nav">
         <a class="nav-link textStyle" href="/listings">Explore</a>
       </div>
-                    
+                     -->
 <!-- 🔎 ADD THIS SEARCH FORM HERE -->
-<form class="d-flex flex-grow-1 justify-content-center px-3"
+<!-- <form class="d-flex flex-grow-1 justify-content-center px-3"
       role="search"
       method="GET"
       action="/listings">
@@ -46,4 +46,81 @@
       </div>
     </div>
   </div>
+</nav> -->
+
+
+
+<!-- ✅ NAVBAR -->
+<nav class="navbar navbar-light bg-white border-bottom sticky-top shadow-sm">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold text-danger" href="/listings">
+      <i class="fa-brands fa-airbnb"></i>
+    </a>
+
+    <!-- Search (Always Visible) -->
+    <form class="d-flex mx-auto search-form"
+          role="search"
+          method="GET"
+          action="/listings">
+
+      <input type="search"
+        name="search"
+        class="form-control rounded-pill me-2"
+        placeholder="Search by title or location"
+        required>
+
+      <button class="btn btn-outline-danger rounded-pill px-4"
+        type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+    <!-- Menu Button -->
+    <button class="btn btn-outline-dark rounded-pill"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#sideMenu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
 </nav>
+
+<!-- ✅ SLIDE MENU (OFFCANVAS) -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sideMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+
+    <a href="/listings" class="d-block mb-3 text-decoration-none text-dark">
+      Explore
+    </a>
+
+    <a href="/listings/new" class="d-block mb-3 text-decoration-none text-dark">
+      Airbnb your home
+    </a>
+
+    <% if(!currUser){ %>
+      <a href="/signup" class="d-block mb-3 text-decoration-none fw-bold text-dark">
+        Signup
+      </a>
+
+      <a href="/login" class="d-block mb-3 text-decoration-none fw-bold text-dark">
+        Login
+      </a>
+    <% } %>
+
+    <% if(currUser){ %>
+      <a href="/logout" class="d-block mb-3 text-decoration-none fw-bold text-dark">
+        Logout
+      </a>
+    <% } %>
+
+  </div>
+</div>
+

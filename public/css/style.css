@@ -249,3 +249,18 @@ body{
 .btn-search i{
     display: inline !important;
 }
+
+
+
+/* this is coding for navbar.ejs responsive */
+
+  .search-form {
+      width: 50%;
+      max-width: 500px;
+    }
+
+    @media (max-width: 768px) {
+      .search-form {
+        width: 65%;
+      }
+    }
