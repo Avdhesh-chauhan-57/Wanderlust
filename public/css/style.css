@@ -1,0 +1,251 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+/* navbar */
+.navbar{
+    height: 5rem;
+    background-color: rgb(255, 255, 255);
+}
+.fa-airbnb{
+    color:#fe424d;
+    font-size: 2rem;
+}
+.background-shade{
+    color: #222222 !important; 
+     height: 2.6rem !important;
+    width: 12rem !important;
+    border-radius: 2rem;
+    text-align: center !important;
+  
+    
+   
+}
+.textStyle a{
+    padding-bottom: 2rem !important;
+}
+
+.textStyle{
+    font-size: 1.4rem!important;
+    font-weight: 600 !important;
+    height: 3.33rem !important;
+    width: 9rem !important;
+    border-radius: 2rem;
+    text-align: center !important;
+    
+}
+.textStyle:hover,
+.background-shade:hover{
+    background-color: #f1f3f5;
+
+}
+
+/* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+.f-info-links,
+.f-info-socials,
+.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.f-info-socials i{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+.f-info{
+    text-align: center;
+    background-color: #ebebeb;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+
+}
+/* card */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.listing-card:hover{
+       transform: scale(1.02) translateY(0px);
+      
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+  font-weight: bolder !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+/* card effects */
+
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+.heart-icon{
+    font-size: 2rem;
+}
+/* newpage */
+.btn-new{
+     background-color:#fe424d !important;
+     border: none !important;
+}
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bottom{
+   
+  display: flex;
+  justify-content: space-between; /* left & right */
+  align-items: flex-end;
+ 
+}
+.bottom p {
+  margin-bottom: 0 !important;                      /* remove Bootstrap margin effect */
+  line-height: 4;                 /* equal text height */
+}
+
+
+.edit-img {
+  width: 300px;     /* size chhota karne ke liye */
+  height: auto;     /* image stretch nahi hogi */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* code for map styling */
+#map { 
+    height: 400px;
+    width: 100%;
+}
+
+
+
+
+
+#filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.filter{
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 1.6rem;
+    opacity: 0.8;
+    /* transition: transform 0.3s ease, color 0.3s ease; */
+    transition: all 0.3s ease;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+    /* transform: scale(1.15); */
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* 
+.tax-toogle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem;
+    margin-left: 2.6rem;
+    display: flex;
+    align-items: center;
+   
+
+} */
+ .tax-toogle{
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    height: 3.5rem;
+    padding: 1rem;
+    /* margin-left: 2.6rem; */
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 10px;
+     margin-left: auto;
+}
+
+/* Bigger switch */
+.form-switch .form-check-input {
+    width: 45px;
+    height: 22px;
+    cursor: pointer;
+}
+
+/* Airbnb red when ON */
+.form-check-input:checked {
+    background-color: #ff385c;
+    border-color: #ff385c;
+}
+
+/* Smooth transition */
+.form-check-input {
+    transition: all 0.3s ease;
+}
+
+
+.search-input {
+    height: 45px;
+    min-width: 320px;   /* shows full placeholder */
+    font-size: 0.95rem;
+    border: 0.001rem solid black !important;
+}
+
+@media (max-width: 768px) {
+    .search-input {
+        min-width: 100%;
+    }
+}
+
+
+.btn-search i{
+    display: inline !important;
+}
