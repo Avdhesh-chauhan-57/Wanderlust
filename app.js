@@ -5,14 +5,14 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const app = express();
-app.set("trust proxy", 1); 
+
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride =require("method-override");
 const ejsMate= require("ejs-mate");
 const ExpressError =require("./utils/ExpressError.js");
 const session = require("express-session");
-const MongoDBStore = require("connect-mongodb-session")(session);
+const MongoStore = require("connect-mongo").default;
 const flash = require("connect-flash");
 const passport =require("passport");
 const LocalStrategy =require("passport-local");
@@ -34,29 +34,30 @@ app.engine('ejs', ejsMate);
 
 const dburl = process.env.ATLASDB_URL;
 
-const store = new MongoDBStore({
-    uri: dburl,
-    collection: "sessions"
+const store = MongoStore.create({
+    mongoUrl: dburl,
+    crypto: {
+        secret: process.env.SECRET
+    },
+    touchAfter: 24 * 3600
 });
 
 store.on("error", function(error) {
     console.log("Session Store Error:", error);
 });
 
-
+app.set("trust proxy", 1); 
 const sessionOption = {
 
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
      store: store,
-     rolling:true,
     cookie:{
         expires: Date.now() +7*24*60*60*1000,
         maxAge:7*24*60*60*1000,
         httpOnly: true,
-       secure: process.env.NODE_ENV === "production", // only secure in production
-       sameSite: "lax"
+       secure:true
     },
 };
 
