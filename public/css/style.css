@@ -282,7 +282,7 @@ body{
     /* Default (Mobile) */
 .offcanvas {
   width: 75% !important;
-  height: 50% !important;
+  height: 70% !important;
   border-top-left-radius: 1.2rem;
   border-bottom-left-radius: 1.2rem;
   background-image: linear-gradient(to top left, slateblue, rgba(253, 165, 120 ,0.896), tomato);
