@@ -1,4 +1,5 @@
 <% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/index.css">
    <div id="filters">
     <div class="filter">
        <div><i class="fa-solid fa-fire"></i></div>
@@ -59,10 +60,10 @@
 
 
  </div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
     <% for(listing of allListings ){%>
         <a href="/listings/<%=listing._id%>" class="listing-link">
-    <div class="card col listing-card mt-2" >
+    <div class="card listing-card mt-2" >
       <img src="<%= listing.image.url %>"  class="card-img-top" alt="listing" style="height: 20rem;">
       <div class="card-img-overlay">
         <div class=" heart-icon">&#9825;</div>

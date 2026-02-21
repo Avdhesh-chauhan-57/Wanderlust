@@ -1,0 +1,97 @@
+/* #filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.filter{
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 1.6rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-5px);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FILTER CONTAINER */
+#filters {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    overflow-x: hidden;          /* enables horizontal scroll */
+    white-space: nowrap;
+    padding: 1.4rem 0;
+    scrollbar-width: none;     /* hide scrollbar (Firefox) */
+    justify-content: space-between;
+
+}
+
+#filters::-webkit-scrollbar {
+    display: none;             /* hide scrollbar (Chrome) */
+}
+
+/* EACH FILTER */
+.filter {
+    flex: 0 0 auto;            /* prevents shrinking */
+    text-align: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.filter i {
+    font-size: 1.4rem;
+}
+
+.filter p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-5px);
+}
+
+
+@media (max-width: 480px) {
+    #filters {
+        gap: 1.4rem;
+    }
+
+    .filter {
+        min-width: 70px;
+        overflow-x: hidden !important;
+    }
+
+    .card-img-top {
+        height: 16rem;
+    }
+}

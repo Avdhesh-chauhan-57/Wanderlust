@@ -80,23 +80,39 @@ body{
 }
 /* card */
 .listing-card{
+    height: 95%;
+    width: 95%;
     border: none !important;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
 }
 
+
 .listing-card:hover{
        transform: scale(1.02) translateY(0px);
       
+}
+.card-body{
+    padding: 0 !important;
 }
 .card-img-top{
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
+    height: 18rem !important;
 }
-.card-body{
-    padding: 0 !important;
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 14rem !important;
+    }
+    .listing-card{
+        margin-bottom: .7rem !important;
+    
+    }
+
 }
+
+
 .card-text p{
   font-weight: bolder !important;
 }
@@ -162,56 +178,53 @@ body{
 }
 
 
-
-
-
-#filters{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-.filter{
-    text-align: center;
-    margin-right: 2rem;
-    margin-top: 1.6rem;
-    opacity: 0.8;
-    /* transition: transform 0.3s ease, color 0.3s ease; */
-    transition: all 0.3s ease;
-}
-.filter:hover{
-    opacity: 1;
-    cursor: pointer;
-    /* transform: scale(1.15); */
-    transform: scale(1.1) translateY(-5px);
-}
-
-/* 
-.tax-toogle{
-    border: 1px solid black;
-    border-radius: 1rem;
-    height: 3.5rem;
-    padding: 1rem;
-    margin-left: 2.6rem;
-    display: flex;
-    align-items: center;
-   
-
-} */
- .tax-toogle{
+ /* .tax-toogle{
     border: 1px solid #ddd;
     border-radius: 1rem;
     height: 3.5rem;
     padding: 1rem;
-    /* margin-left: 2.6rem; */
     display: flex;
     align-items: center;
     background-color: #fff;
     gap: 10px;
      margin-left: auto;
+} */
+
+.tax-toogle {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    height: 3.2rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #fff;
+    margin-left: auto;
+    white-space: nowrap;   /* prevents text breaking */
+    flex-shrink: 0;        /* prevents collapsing */
+    transition: all 0.3s ease;
 }
+
+.tax-toogle:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+@media (max-width: 576px) {
+    #filters {
+        flex-wrap: wrap;
+    }
+
+    .tax-toogle {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+
+
 
 /* Bigger switch */
 .form-switch .form-check-input {
@@ -264,3 +277,37 @@ body{
         width: 65%;
       }
     }
+
+
+    /* Default (Mobile) */
+.offcanvas {
+  width: 75% !important;
+  height: 50% !important;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  background-image: linear-gradient(to top left, slateblue, rgba(253, 165, 120 ,0.896), tomato);
+  
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .offcanvas {
+    width: 350px !important;
+    height: 100% !important;
+    background-image: linear-gradient(to top left, slateblue, rgba(253, 165, 120, 0.896), tomato);
+  }
+}
+.text-decoration-none {
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.7);
+  padding: 15px 15px;
+  border-radius: 10px;
+  color: #222;
+   transition: all 0.3s ease;
+}
+
+.text-decoration-none:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-5px);;
+}
