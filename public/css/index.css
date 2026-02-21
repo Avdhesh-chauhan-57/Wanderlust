@@ -43,7 +43,8 @@
 #filters {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    row-gap: 1.4rem;
+    column-gap: .3rem;
     overflow-x: hidden;          /* enables horizontal scroll */
     white-space: nowrap;
     padding: 1.4rem 0;
@@ -81,9 +82,10 @@
 }
 
 
-@media (max-width: 480px) {
+@media (mim-width: 480px) {
     #filters {
-        gap: .1rem;
+           row-gap: 1.4rem;
+    column-gap: .3rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
