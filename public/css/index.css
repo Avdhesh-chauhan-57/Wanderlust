@@ -48,7 +48,7 @@
     white-space: nowrap;
     padding: 1.4rem 0;
     scrollbar-width: none;     /* hide scrollbar (Firefox) */
-    justify-content: space-between;
+    justify-content: flex-start;
 
 }
 
@@ -83,7 +83,10 @@
 
 @media (max-width: 480px) {
     #filters {
-        gap: 1.4rem;
+        gap: .1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
     .filter {

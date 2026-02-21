@@ -94,7 +94,10 @@ body{
 }
 .card-body{
     padding: 0 !important;
+    
 }
+
+
 .card-img-top{
     border-radius: 1rem !important;
     width: 100% !important;
@@ -119,18 +122,17 @@ body{
     
 
 
-    @media (max-width: 480px) {
-    .row>* {
-       padding-right:0 !important;
-        margin-top:0 !important;
-    }
-
+  
+    .card-text{
+    text-decoration: none  !important;
+}
 
 .card-text p{
   font-weight: bolder !important;
+  
 }
 .listing-link{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* card effects */
