@@ -11,4 +11,12 @@ router.get("/terms", (req, res) => {
     res.render("./pages/terms");
 });
 
+
+router.get("/trending", (req, res) => {
+    res.render("./pages/trending.ejs");
+});
+router.get("/room", (req, res) => {
+    res.render("./pages/rooms.ejs");
+});
+
 module.exports = router;
