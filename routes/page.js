@@ -19,4 +19,9 @@ router.get("/room", (req, res) => {
     res.render("./pages/rooms.ejs");
 });
 
+router.get("/cities", (req, res) => {
+    res.render("./pages/iconic.ejs",);
+});
+
+
 module.exports = router;
