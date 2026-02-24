@@ -140,20 +140,25 @@ footer {
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {
+
     .f-info {
         flex-direction: column;
         text-align: center;
+        gap: 12px;
     }
 
     .f-info-links {
-        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .f-info-socials {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
-
 
 
 
