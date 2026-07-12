@@ -415,7 +415,8 @@ footer {
   height: 70% !important;
   border-top-left-radius: 1.2rem;
   border-bottom-left-radius: 1.2rem;
-  background-image: linear-gradient(to top left, slateblue, rgba(253, 165, 120 ,0.896), tomato);
+  background: linear-gradient(180deg, rgb(221, 221, 221) 30.53%, rgb(110, 136, 161) 100.00%);
+  box-shadow: 3 10px 13px rgba(0, 0, 0, .2);
   
 }
 
@@ -423,9 +424,10 @@ footer {
 @media (min-width: 992px) {
   .offcanvas {
     width: 350px !important;
-    height: 100% !important;
-    background-image: linear-gradient(to top left, slateblue, rgba(253, 165, 120, 0.896), tomato);
-  }
+    height: 90% !important;
+    background: linear-gradient(180deg, rgb(221, 221, 221) 30.53%, rgb(110, 136, 161) 100.00%);
+    box-shadow: 3 10px 13px rgba(0, 0, 0, .2);
+}
 }
 .text-decoration-none {
     font-weight: 600;
